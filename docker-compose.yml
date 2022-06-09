@@ -4,6 +4,11 @@ volumes:
   ano:
     driver: local
 
+networks:
+  default:
+    mynet:
+      external: true
+
 services:
   example-apps:
     build: Dockerfile
@@ -11,6 +16,6 @@ services:
     container_name: example-container
     entrypoint: "/app/start.sh"
     networks:
-      - bridge
+      - mynet
     volumes:
       - ano:/app:rw
