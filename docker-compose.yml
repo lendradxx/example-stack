@@ -11,10 +11,9 @@ networks:
 
 services:
   example-apps:
-    build: ./Dockerfile
-    # image: "archlinux:latest"
+    image: "archlinux:latest"
     container_name: example-container
-    entrypoint: "/app/start.sh"
+    command: echo "Hello Worlds"
     networks:
       - bridge
     volumes:
