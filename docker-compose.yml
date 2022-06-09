@@ -5,9 +5,9 @@ volumes:
     driver: local
 
 networks:
-  default:
-    bridge:
-      external: true
+  bridge:
+    external:
+      name: bridge
 
 services:
   example-apps:
