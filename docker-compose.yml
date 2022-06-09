@@ -1,0 +1,12 @@
+version: '3'
+
+volumes:
+  ano:
+
+services:
+  example-apps:
+    build: "./Dockerfile"
+    container_name: example-container
+    entrypoint: "/app/start.sh"
+    volumes:
+      - ano:/app:rw
