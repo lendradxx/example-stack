@@ -4,17 +4,10 @@ volumes:
   ano:
     driver: local
 
-networks:
-  bridge:
-    external:
-      name: bridge
-
 services:
   example-apps:
     image: "archlinux:latest"
     container_name: example-container
     command: echo "Hello Worlds"
-    networks:
-      - bridge
     volumes:
       - ano:/app:rw
