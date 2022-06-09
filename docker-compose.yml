@@ -5,7 +5,7 @@ volumes:
 
 services:
   example-apps:
-    build: "./Dockerfile"
+    image: "archlinux:latest"
     container_name: example-container
     entrypoint: "/app/start.sh"
     volumes:
