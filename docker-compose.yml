@@ -2,11 +2,15 @@ version: '3'
 
 volumes:
   ano:
+    driver: local
 
 services:
   example-apps:
+    build: Dockerfile
     image: "archlinux:latest"
     container_name: example-container
     entrypoint: "/app/start.sh"
+    networks:
+      - bridge
     volumes:
       - ano:/app:rw
