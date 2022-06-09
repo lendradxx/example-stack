@@ -12,7 +12,7 @@ networks:
 services:
   example-apps:
     build: .
-    image: "archlinux:latest"
+    # image: "archlinux:latest"
     container_name: example-container
     entrypoint: "/app/start.sh"
     networks:
